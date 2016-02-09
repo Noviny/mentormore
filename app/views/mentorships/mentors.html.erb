@@ -1,0 +1,6 @@
+<h3>Your Mentors:</h3>
+
+<% @current_user.mentorships.each do |m| %>
+  <%= User.find(m.mentor_id).name %>
+  <p>Send a Private Message -- View Your Conversation</p>
+<% end %>

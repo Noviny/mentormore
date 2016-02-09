@@ -1,0 +1,10 @@
+<h3>Your Mentees:</h3>
+
+<% @current_user.mentees.each do |m| %>
+  <%= User.find(m.user_id).name %>
+  <p>Send a Private Message -- View Your Conversation</p>
+<% end %>
+
+<% unless @current_user.mentees.any? %>
+  <p>You don't have any mentees yet. <%= link_to 'Answer some questions', questions_path %> if you want to help people.</p>
+<% end %>

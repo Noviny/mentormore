@@ -22,6 +22,12 @@ class User < ActiveRecord::Base
   has_many :notifications
   has_many :answers
 
-  has_many :mentorships, :foreign_key => :user_a_id
-  has_many :users, :through => :mentorships, :source => :user_b
+  has_many :mentorships
+
+  def mentees
+    Mentorship.where :mentor_id => :id
+  end
+
+  # code defines mentees (grabs all mentorships where userID matches mentor_id)
+
 end

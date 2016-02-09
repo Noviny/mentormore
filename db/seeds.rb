@@ -38,8 +38,6 @@ Notification.destroy_all
 
 n1 = Notification.create :user_id => u1.id, :question_id => q1.id, :answer_id => a3.id
 
-# Mentorship.destroy_all
+Mentorship.destroy_all
 
-# m1 = Mentorship.create :user_a_id => u1.id, :user_b_id => u2.id
-
-# u1 << u2
+m1 = Mentorship.create :user_id => u1.id, :mentor_id => u2.id

@@ -15,9 +15,11 @@
     <% if @current_user.mentee? %>
       <%= link_to 'Ask For Help', new_question_path %>
       <%= link_to 'My Asked Questions', myquestions_path %>
+      <%= link_to 'My Mentors', mentors_path %>
     <% end %>
     <% if @current_user.mentor? %>
       <%= link_to 'Look at Questions', questions_path %>
+      <%= link_to 'My Mentees', mentees_path %>
     <% end %>
     <%= link_to "Notifications: #{@current_user.notifications.length}", notifications_path %>
   <% end %>

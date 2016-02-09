@@ -6,6 +6,9 @@ Rails.application.routes.draw do
   end
   resources :users
 
+  get '/mentors' => 'mentorships#mentors'
+  get '/mentees' => 'mentorships#mentees'
+
   get '/login' => 'session#new'
   post 'login' => 'session#create'
   delete '/login' => 'session#destroy'

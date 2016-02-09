@@ -3,6 +3,13 @@ $gray: #DDDEDE;
 $green: #A5C05B;
 $grey-blue: #7BA4A8;
 
+$dark-green: darken($green, 10%);
+
+a:hover {
+  background-color: transparent;
+  color: $black;
+}
+
 body {
   background-color: $grey-blue;
   color: $black;
@@ -13,13 +20,24 @@ body {
   width: 80%;
   max-width: 960px;
   margin: auto;
-  min-height: 60vh;
+  min-height: 80vh;
+  padding: 1rem;
+
+  td {
+    padding: 0.4rem;
+  }
 }
 
 #navbar {
   background-color: $green;
 
+  padding: 1rem;
+
   a {
     padding: 1rem;
+  }
+
+  a:hover {
+    background-color: $dark-green;
   }
 }

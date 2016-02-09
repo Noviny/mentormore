@@ -27,8 +27,8 @@ ActiveRecord::Schema.define(version: 20160208232704) do
   end
 
   create_table "mentorships", id: false, force: :cascade do |t|
-    t.integer "user_a_id", null: false
-    t.integer "user_b_id", null: false
+    t.integer "user_id",   null: false
+    t.integer "mentor_id", null: false
   end
 
   create_table "notifications", force: :cascade do |t|
