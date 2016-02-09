@@ -1,0 +1,9 @@
+<h3>Your Questions:</h3>
+
+<% if @current_user.questions.any? %>
+  <ul>
+  <% @current_user.questions.each do |q| %>
+    <li><%= link_to q.name, question_path(q.id) %>: <%= q.asking %> <%= q.answers.length %> responses</li>
+  <% end %>
+  </ul>
+<% end %>

@@ -1,0 +1,25 @@
+$black: #232122;
+$gray: #DDDEDE;
+$green: #A5C05B;
+$grey-blue: #7BA4A8;
+
+body {
+  background-color: $grey-blue;
+  color: $black;
+}
+
+#content {
+  background-color: $gray;
+  width: 80%;
+  max-width: 960px;
+  margin: auto;
+  min-height: 60vh;
+}
+
+#navbar {
+  background-color: $green;
+
+  a {
+    padding: 1rem;
+  }
+}

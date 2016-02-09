@@ -15,6 +15,10 @@
     <%= f.label :name %><br>
     <%= f.text_field :name %>
   </div>
+  <div>
+    <%= f.label :email %>
+    <%= f.email_field :email %>
+  </div>
   <div class="field">
     <%= f.label :mentor %><br>
     <%= f.check_box :mentor %>
@@ -24,12 +28,12 @@
     <%= f.check_box :mentee %>
   </div>
   <div class="field">
-    <%= f.label :password_digest %><br>
-    <%= f.text_field :password_digest %>
+    <%= f.label :password %><br>
+    <%= f.password_field :password %>
   </div>
   <div class="field">
-    <%= f.label :admin %><br>
-    <%= f.check_box :admin %>
+    <%= f.label :password_confirmation %>
+    <%= f.password_field :password_confirmation %>
   </div>
   <div class="field">
     <%= f.label :description %><br>

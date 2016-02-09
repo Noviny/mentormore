@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @question.name %>
+</p>
+
+<p>
+  <strong>Asking:</strong>
+  <%= @question.asking %>
+</p>
+
+<%=  %>
+
+<% if @question.answers.any? %>
+  <% @question.answers.each do |a| %>
+    <div class="answer" id="<%= a.id %>"></div>
+    <%= a.name %><br />
+    The answer: <%= a.explaining %><br />
+    Answered by: <%= User.find(a.user_id).name %><br />
+    Offered further help? <% if a.more_mentorship %><%= 'Yes' %><% else %><%= 'No' %><% end %><br />
+  <% end %>
+<% else %>
+  <p>No Answers Yet</p>
+<% end %>
+
+<%= link_to 'Refine Question', edit_question_path(@question) %>

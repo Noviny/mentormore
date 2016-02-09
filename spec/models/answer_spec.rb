@@ -1,21 +1,19 @@
 # == Schema Information
 #
-# Table name: users
+# Table name: answers
 #
 #  id              :integer          not null, primary key
 #  name            :string
-#  mentor          :boolean
-#  mentee          :boolean
-#  password_digest :string
-#  admin           :boolean
-#  description     :text
+#  explaining      :text
+#  user_id         :integer
+#  question_id     :integer
 #  created_at      :datetime         not null
 #  updated_at      :datetime         not null
-#  email           :string
+#  more_mentorship :boolean
 #
 
 require 'rails_helper'
 
-RSpec.describe User, type: :model do
+RSpec.describe Answer, type: :model do
   pending "add some examples to (or delete) #{__FILE__}"
 end

@@ -157,3 +157,17 @@ RSpec.describe UsersController, type: :controller do
   end
 
 end
+
+
+
+# The user has a unique email address
+# The user cannot be created without name, email, password, confirm password.
+
+# The user can ask to be a mentor. TICKING THIS SHOULD SUBMIT THE FORM ELSEHWERE, NEW NEXT PAGE
+#change the page to go to after user creation
+
+# Create a new session
+# session persists between pages
+#Oh yeah, current user name displayed at the top
+#Signing up also signs you in
+#Sign up creates things
