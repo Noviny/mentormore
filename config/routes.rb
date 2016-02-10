@@ -6,14 +6,18 @@ Rails.application.routes.draw do
   end
   resources :users
 
+  '/' => 'users#index'
+
+  root 'users#index'
+
   get '/mentors' => 'mentorships#mentors'
   get '/mentees' => 'mentorships#mentees'
 
   get '/login' => 'session#new'
-  post 'login' => 'session#create'
+  post '/login' => 'session#create'
   delete '/login' => 'session#destroy'
 
-  root 'users#index'
+
 
   get '/myquestions' => 'questions#mine'
 end
