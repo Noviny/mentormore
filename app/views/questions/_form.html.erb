@@ -21,7 +21,7 @@
   </div>
   <div>
     <%= f.label 'Days' %>
-    <%= f.range_field :timeframe, in: 1..90  %>
+    <%= f.date_field :timeframe %>
   </div>
   <div class="actions">
     <%= f.submit %>

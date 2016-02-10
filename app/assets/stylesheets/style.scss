@@ -15,6 +15,18 @@ body {
   color: $black;
 }
 
+form {
+  width: 50%;
+
+  .field input, .field textarea {
+    width: 100%;
+  }
+
+  div {
+    padding: 1rem;
+  }
+}
+
 #content {
   background-color: $gray;
   width: 80%;
