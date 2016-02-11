@@ -1,8 +1,12 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Welcome!</h1>
+<h1>Welcome to Mentor More!</h1>
 
 <% if @current_user.present? %>
+  <p>We hope you find the answers you are looking for.</p> 
 <% else %>
+  <p>A site to help connect people with answers to their professional questions in a safe space. Ask anonymous questions, and connect with the mentors you find most helpful.</p>
+
+  <p>You can also sign up to mentor others, if you believe your professional experience, whatever it may be, could help out others.</p>
   <%= link_to 'Sign Up', new_user_path %> -- <%= link_to 'Sign In', login_path %>
 <% end %>

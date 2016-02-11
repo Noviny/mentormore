@@ -20,7 +20,7 @@
     The answer: <%= a.explaining %><br />
     Answered by: <%= User.find(a.user_id).name %><br />
     Offered further help? <% if a.more_mentorship %><%= 'Yes' %>
-    <%= link_to 'Add as Mentor', mentors_path, :method => :post %><br />
+    <%= link_to 'Add as Mentor', mentors_path(:mentor_id => a.user_id), :method => :post %><br />
     <% else %><%= 'No' %><% end %>
     </div>
   <% end %>

@@ -3,8 +3,7 @@
 
 <% if @current_user.mentorships.any? %>
   <% @current_user.mentorships.each do |m| %>
-    <%= User.find(m.mentor_id).name %>
-    <p>Send a Private Message -- View Your Conversation</p>
+    <%= User.find(m.mentor_id).name %> -- <a href="mailto:<%= User.find(m.mentor_id).email %>"><%= User.find(m.mentor_id).email %></a>
   <% end %>
 <% else %>
   <p>No Mentors yet <%= link_to 'Ask some questions', new_question_path %></p>

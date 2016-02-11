@@ -10,7 +10,7 @@
 
 <div id="navbar">
   <% if @current_user.present? %>
-    <%= link_to @current_user.name, user_path(@current_user.id) %>
+    <%= link_to @current_user.name, myquestions_path %>
     <%= link_to 'Log Out', login_path, :method => :delete  %>
     <% if @current_user.mentee? %>
       <%= link_to 'Ask For Help', new_question_path %>
