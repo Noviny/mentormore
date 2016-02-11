@@ -1,6 +1,11 @@
 <h3>Your Mentors:</h3>
 
-<% @current_user.mentorships.each do |m| %>
-  <%= User.find(m.mentor_id).name %>
-  <p>Send a Private Message -- View Your Conversation</p>
+
+<% if @current_user.mentorships.any? %>
+  <% @current_user.mentorships.each do |m| %>
+    <%= User.find(m.mentor_id).name %>
+    <p>Send a Private Message -- View Your Conversation</p>
+  <% end %>
+<% else %>
+  <p>No Mentors yet <%= link_to 'Ask some questions', new_question_path %></p>
 <% end %>

@@ -13,6 +13,7 @@ Rails.application.routes.draw do
 
   get '/mentors' => 'mentorships#mentors'
   get '/mentees' => 'mentorships#mentees'
+  post '/mentors' => 'mentorships#create'
 
   get '/login' => 'session#new'
   post '/login' => 'session#create'

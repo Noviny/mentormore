@@ -15,6 +15,7 @@
       <tr>
         <td><%= Question.find(notification.question_id).name %></td>
         <td><%= Answer.find(notification.answer_id).explaining %></td>
+        <td><%= link_to 'See full details', question_path(notification.question_id) %></td>
         <td><%= link_to 'Dismiss', notification, method: :delete %></td>
       </tr>
     <% end %>

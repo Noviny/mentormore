@@ -1,25 +1,30 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
+  <strong>Question Title:</strong>
   <%= @question.name %>
 </p>
 
 <p>
-  <strong>Asking:</strong>
+  <strong>The question:</strong>
   <%= @question.asking %>
 </p>
 
 <%=  %>
 
 <% if @question.answers.any? %>
+  
   <% @question.answers.each do |a| %>
-    <div class="answer" id="<%= a.id %>"></div>
-    <%= a.name %><br />
+    <div class="answer" id="<%= a.id %>">
+    <strong><%= a.name %></strong><br />
     The answer: <%= a.explaining %><br />
     Answered by: <%= User.find(a.user_id).name %><br />
-    Offered further help? <% if a.more_mentorship %><%= 'Yes' %><% else %><%= 'No' %><% end %><br />
+    Offered further help? <% if a.more_mentorship %><%= 'Yes' %>
+    <%= link_to 'Add as Mentor', mentors_path, :method => :post %><br />
+    <% else %><%= 'No' %><% end %>
+    </div>
   <% end %>
+  
 <% else %>
   <p>No Answers Yet</p>
 <% end %>

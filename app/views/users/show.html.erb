@@ -6,12 +6,12 @@
 </p>
 
 <p>
-  <strong>Mentor Status:</strong>
+  <strong>Am I a mentor?</strong>
   <%= @user.mentor %>
 </p>
 
 <p>
-  <strong>Mentee status:</strong>
+  <strong>Am I looking for mentorship?</strong>
   <%= @user.mentee %>
 </p>
 
@@ -19,6 +19,3 @@
   <strong>Description:</strong>
   <%= @user.description %>
 </p>
-
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
